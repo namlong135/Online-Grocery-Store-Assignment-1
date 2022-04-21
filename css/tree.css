@@ -1,0 +1,25 @@
+body {
+   margin: 0;
+}
+
+.products-tree {
+   width: 100%;
+   text-align: center;
+   background-color: brown;
+   overflow: hidden;
+}
+
+.top-right {
+   width: 50%;
+}
+
+.categories {
+   width: 100%;
+   height: auto;
+}
+
+.img-category {
+   display: none;
+   width: 100%;
+   height: auto;
+}

@@ -1,0 +1,11 @@
+.header {
+  color: white;
+}
+
+.inputContainer {
+  display: flex;
+}
+
+.inputField {
+  margin-right: 5px;
+}

@@ -1,22 +1,18 @@
 <html>
    <head>
       <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-      <link rel="stylesheet" href="styles/products.css"/>
-      <script src="js/getproduct"></script>
-      <script src="js/imageMap"></script>
-      <script src="js/initialise"></script>
-      <script src="js/showtree"></script>
+      <link rel="stylesheet" href="css/tree.css"/>
    </head>
    <body>
       <div class="visual-map">
 
             <img id="categories" class="categories" src="images/categories.png" usemap="#map-categories">
             <map id="map-categories" name="map-categories">
-               <area class="category" title="frozen-food" coords="5,141,88,180" shape="rect" onmouseover="show('frozen-food', frozenFoodScale)">
-               <area class="category" title="fresh-food" coords="101,141,181,180" shape="rect" onmouseover="show('fresh-food', freshFoodScale)">
-               <area class="category" title="beverages" coords="196,140,277,180" shape="rect" onmouseover="show('beverages', beveragesScale)">
-               <area class="category" title="home-health" coords="293,141,373,180" shape="rect" onmouseover="show('home-health', homeHealthScale)">
-               <area class="category" title="pet-food" coords="387,142,468,180" shape="rect" onmouseover="show('pet-food', petFoodScale)">
+               <area class="category" title="frozen-food" coords="5,141,88,180" shape="rect" onmouseover="onMouseOver('frozen-food', frozenFoodScale)">
+               <area class="category" title="fresh-food" coords="101,141,181,180" shape="rect" onmouseover="onMouseOver('fresh-food', freshFoodScale)">
+               <area class="category" title="beverages" coords="196,140,277,180" shape="rect" onmouseover="onMouseOver('beverages', beveragesScale)">
+               <area class="category" title="home-health" coords="293,141,373,180" shape="rect" onmouseover="onMouseOver('home-health', homeHealthScale)">
+               <area class="category" title="pet-food" coords="387,142,468,180" shape="rect" onmouseover="onMouseOver('pet-food', petFoodScale)">
             </map>
 
             <img id="frozen-food" class="img-category" src="images/frozen-food.png" usemap="#map-frozen-food">
@@ -71,9 +67,9 @@
                <area id='5004' target="view" href="view.php?id=5004" title="fish-food" coords="388,131,470,171" shape="rect">
             </map>
       </div>
-   <script src="js/getproduct.js"></script>
+   <script src="js/getSelectedProduct.js"></script>
    <script src="js/imageMap.js"></script>
-   <script src="js/initialise.js"></script>
-   <script src="js/showtree.js"></script>
+   <script src="js/constant.js"></script>
+   <script src="js/treeDisplay.js"></script>
    </body>
 </html>
