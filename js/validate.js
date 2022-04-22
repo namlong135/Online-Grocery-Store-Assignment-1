@@ -1,23 +1,23 @@
 function validateAdd(stock) {
-  let string = document.getElementById('quantity').value;
-  let number = new RegExp(/^[0-9]+$/);
+  let value = document.getElementById('quantity').value;
+  let number = new RegExp(/^\+?(0|[1-9]\d*)$/);
   let other = new RegExp(/[^0-9]+/);
 
-  if (string.match(number)) {
-    let quantity = parseInt(string);
-    if (quantity < 0) {
-      alert('specified quantity MUST NOT be negative');
+  if (value.match(number)) {
+    let quantity = parseInt(value);
+    if (quantity <= 0) {
+      alert('Invalid quantity, please try again');
       return false;
     }
     if (quantity > stock) {
-      alert('specified quantity MUST NOT exceed stocked amount');
+      alert('Invalid quantity, please try again');
       return false;
     }
-  } else if (string.match(other)) {
-    alert('specified quantity MUST NOT contain letters or symbols');
+  } else if (value.match(other)) {
+    alert('Invalid quantity, please try again');
     return false;
   } else {
-    alert('please enter a specific quantity');
+    alert('Invalid quantity, please try again');
     return false;
   }
 
@@ -25,37 +25,35 @@ function validateAdd(stock) {
 }
 
 function validateCheckout() {
-  let email = document.getElementById('email').value;
   let fname = document.getElementById('fname').value;
   let lname = document.getElementById('lname').value;
-  let street = document.getElementById('street').value;
-  let city = document.getElementById('city').value;
+  let email = document.getElementById('email').value;
+  let address = document.getElementById('address').value;
+  let suburb = document.getElementById('suburb').value;
   let state = document.getElementById('state').value;
-  let postCode = document.getElementById('postcode').value;
+  let zip = document.getElementById('zip').value;
   let country = document.getElementById('country').value;
-
-  if (email == '' || fname == '' || lname == '' || street == '' ||
-    city == '' || state == '' || postCode == '' || country == '') {
-    alert('all fields must be completed');
-    return false;
-  }
-
   let username = email.split('@')[0];
-  console.log('user:', username);
-  if (!username) {
-    alert('invalid email address');
+  let domain = email.split('@')[1];
+
+  if (email == '' || fname == '' || lname == '' || address == '' ||
+    suburb == '' || state == '' || zip == '' || country == '') {
+    alert('All fields must be completed');
     return false;
   }
 
-  let domain = email.split('@')[1];
-  console.log('domain:', domain);
+  if (!username) {
+    alert('Invalid email address');
+    return false;
+  }
+
   if (!domain) {
-    alert('invalid email address');
+    alert('Invalid email address');
     return false;
   }
 
   if (!domain.match(/\./g)) {
-    alert('top level domain CAN NOT be blank');
+    alert('Invalid email address');
     return false;
   }
 

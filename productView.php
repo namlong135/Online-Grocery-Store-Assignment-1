@@ -8,7 +8,7 @@ if (isset($_GET['id'])) {
    $result = mysqli_query($link, $product_query);
 
 ?>  
-   <link rel='stylesheet' href='css/view.css' />
+   <link rel='stylesheet' href='css/productView.css' />
    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"rel="stylesheet" />
    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet" />
    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/4.0.0/mdb.min.css" rel="stylesheet" />  
@@ -44,7 +44,7 @@ if (isset($_GET['id'])) {
             $stock = mysqli_fetch_assoc($result)['in_stock'];
          ?>
          <td>
-            <form id="add-cart" action="cart.php?action=add&id=<?php print $_GET['id']; ?>" method="POST" target="cart" class="inputContainer">
+            <form id="add-cart" action="cart.php?action=add&id=<?php print $_GET['id']; ?>" method="POST" target="cart" class="inputContainer" onsubmit="return validateAdd(<?php print $stock ?>)">
                <input type="text" id="quantity" name="quantity" value="1" class=""/>
                <input type="submit" value="Add" class="btn btn-sm btn-rounded btn-success"/>
             </form>
@@ -56,8 +56,10 @@ if (isset($_GET['id'])) {
 <?php
 } 
 else {
-   print '<h1 style="text-align: center;">';
-   print 'No products selected...';
-   print '</h1>';
+   print '
+   <h1 style="text-align: center;">
+   No products selected...
+   </h1>
+   ';
 }
 ?>

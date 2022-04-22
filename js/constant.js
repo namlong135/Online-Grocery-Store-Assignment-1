@@ -16,12 +16,12 @@ let homeHealthImg = document.getElementById('home-health');
 let petFoodMap = document.getElementById('map-pet-food');
 let petFoodImg = document.getElementById('pet-food');
 
-let categoriesScale = new ImageMapScale(categoriesMap, categoriesImg);
-let frozenFoodScale = new ImageMapScale(frozenFoodMap, frozenFoodImg);
-let freshFoodScale = new ImageMapScale(freshFoodMap, freshFoodImg);
-let beveragesScale = new ImageMapScale(beveragesMap, beveragesImg);
-let homeHealthScale = new ImageMapScale(homeHealthMap, homeHealthImg);
-let petFoodScale = new ImageMapScale(petFoodMap, petFoodImg);
+let categoriesScale = new ImageMap(categoriesMap, categoriesImg);
+let frozenFoodScale = new ImageMap(frozenFoodMap, frozenFoodImg);
+let freshFoodScale = new ImageMap(freshFoodMap, freshFoodImg);
+let beveragesScale = new ImageMap(beveragesMap, beveragesImg);
+let homeHealthScale = new ImageMap(homeHealthMap, homeHealthImg);
+let petFoodScale = new ImageMap(petFoodMap, petFoodImg);
 
 const addItemErrorMsg = {
   negative: {

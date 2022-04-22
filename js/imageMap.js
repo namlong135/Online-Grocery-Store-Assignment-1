@@ -1,4 +1,4 @@
-class ImageMapScale {
+class ImageMap {
   constructor(map, image) {
     this.image = image;
     this.objects = [];

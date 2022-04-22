@@ -1,0 +1,41 @@
+.checkoutFormContainer {
+  margin: 15px;
+}
+
+.inputField {
+  border-radius: 5px;
+  border: 1.75px solid black;
+  padding: 7px;
+}
+
+.form-label {
+  color: black!important;
+  font-weight: 500;
+}
+
+.header {
+  color: white;
+}
+
+.confirmHeader {
+  text-align: center;
+  font-weight: 900;
+  color: black;
+}
+
+ul {
+  margin-left: 30px;
+}
+
+li {
+  padding: 0.5rem 1.5rem!important;
+}
+
+.table-responsive{
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+span {
+  color: red;
+}
