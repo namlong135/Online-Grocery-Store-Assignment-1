@@ -33,29 +33,11 @@ function validateCheckout() {
   let state = document.getElementById('state').value;
   let zip = document.getElementById('zip').value;
   let country = document.getElementById('country').value;
-  let username = email.split('@')[0];
-  let domain = email.split('@')[1];
 
   if (email == '' || fname == '' || lname == '' || address == '' ||
     suburb == '' || state == '' || zip == '' || country == '') {
     alert('All fields must be completed');
     return false;
   }
-
-  if (!username) {
-    alert('Invalid email address');
-    return false;
-  }
-
-  if (!domain) {
-    alert('Invalid email address');
-    return false;
-  }
-
-  if (!domain.match(/\./g)) {
-    alert('Invalid email address');
-    return false;
-  }
-
   return true;
 }
