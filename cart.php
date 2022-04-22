@@ -1,5 +1,5 @@
 <?php
-  $link = mysqli_connect("localhost", "root", "", "assignment1") or die("Could not connect to database");
+  $link = mysqli_connect("aa9jwufxbxj1po.c5nezg2ijph6.us-east-1.rds.amazonaws.com", "uts", "longlong1642", "assignment1") or die("Could not connect to database");
   session_start();
 
   if (isset($_GET['action'])) {
